@@ -1,3 +1,45 @@
+Clear
+from subprocess import call
+from os import name
+
+def clear():
+  call("clear" if name == "posix" else "cls", shell=True)
+
+Intro
+import colorama as cr
+from printf import printf
+
+def intro():
+  printf(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}----------NUMBER GUESSING GAME---------- \n")
+  printf(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}Welcome to The Number Guessing Game! \n")
+  printf(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}Please Select Difficulty : \n")
+  
+  
+  
+Print
+from sys import stdout
+from time import sleep
+
+def printf(text, pause=0.05):
+  for character in text:
+    stdout.write(character)
+    stdout.flush()
+    sleep(pause)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import os
 os.system('clear')
 import random
