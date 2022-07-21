@@ -30,16 +30,6 @@ def printf(text, pause=0.05):
 
 
 
-
-
-
-
-
-
-
-
-
-
 import os
 os.system('clear')
 import random
@@ -78,8 +68,7 @@ def numberguessinggame():
     Easy_mode = int(Easy_mode)
     while Easy_mode == 1:
       clear()
-      x = random.randint(1,10)
-      printf("You have " + str(x) + " guesses." + "\n")
+      printf("You have " + str(10) + " guesses." + "\n")
       guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
       guess = int(guess)
 
@@ -130,8 +119,7 @@ def numberguessinggame():
     Medium_mode = int(Medium_mode)
     while Medium_mode == 1:
       clear()
-      x = random.randint(1,10)
-      printf("You have " + str(x) + " guesses." + "\n")
+      printf("You have " + str(10) + " guesses." + "\n")
       guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
       guess = int(guess)
       if guess == Unknown2 :
@@ -183,8 +171,7 @@ def numberguessinggame():
     Hard_mode = int(Hard_mode)
     while Hard_mode == 1:
       clear()
-      x = random.randint(1,10)
-      printf("You have " + str(x) + " guesses." + "\n")
+      printf("You have " + str(10) + " guesses." + "\n")
       guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
       guess = int(guess)
       if guess == Unknown3 :
@@ -238,8 +225,7 @@ def numberguessinggame():
     Insane_mode = int(Insane_mode)
     while Insane_mode == 1:
       clear()
-      x = random.randint(1,10)
-      printf("You have " + str(x) + " guesses." + "\n")
+      printf("You have " + str(10) + " guesses." + "\n")
       guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
       guess = int(guess)
       if guess == Unknown4 :
@@ -293,8 +279,7 @@ def numberguessinggame():
     Impossible_mode = int(Impossible_mode)
     while Impossible_mode == 1:
       clear()
-      x = random.randint(1,10)
-      printf("You have " + str(x) + " guesses." + "\n")         
+      printf("You have " + str(10) + " guesses." + "\n")         
       guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
       guess = int(guess)
       if guess == Unknown5 :
@@ -344,3 +329,13 @@ def numberguessinggame():
     numberguessinggame()
 
 numberguessinggame ()      
+     
+
+
+
+
+
+
+
+
+ 
