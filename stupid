@@ -101,7 +101,7 @@ def numberguessinggame():
           printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than " + str(guess) + ".  You have \n" + str(10 - counter) + " guesses left.")
           time.sleep(1)
           clear()
-      if counter == x:
+      if counter == 10:
         printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown1))
 
         printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n] \n")
@@ -153,7 +153,7 @@ def numberguessinggame():
           time.sleep(1)
        
           clear()
-      if counter == x:
+      if counter == 10:
         printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown2))
 
         printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
@@ -207,7 +207,7 @@ def numberguessinggame():
           time.sleep(1)
        
           clear()
-      if counter == x:
+      if counter == 10:
         printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown3))
 
         printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n ")
@@ -261,7 +261,7 @@ def numberguessinggame():
           time.sleep(1)
        
           clear()
-      if counter == x:
+      if counter == 10:
         printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown4))
 
         printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
@@ -315,7 +315,7 @@ def numberguessinggame():
           time.sleep(1)
        
           clear()
-      if counter == x:
+      if counter == 10:
         printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown5))
 
         printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
@@ -329,14 +329,4 @@ def numberguessinggame():
     clear()
     numberguessinggame()
 
-numberguessinggame ()      
-     
-
-
-
-
-
-
-
-
- 
+numberguessinggame ()  
