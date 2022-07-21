@@ -1,0 +1,304 @@
+import os
+os.system('clear')
+import random
+import colorama as cr
+from intro import intro
+from printf import printf
+from clear import clear
+import time
+
+
+def numberguessinggame():
+  intro()
+  start = input("Type 1 for Easy  Mode \nType 2 for Medium Mode \nType 3 For Hard Mode \nType 4 For Insane Mode \nType 5 For Impossible Mode \n")
+  start = int(start)
+
+
+
+ 
+  counter = 0
+  Unknown1 = random.randint(1,10)
+  Unknown1 = int(Unknown1)
+  Unknown2 = random.randint(1,100)
+  Unknown2 = int(Unknown2)
+  Unknown3 = random.randint(1,1000)
+  Unknown3 = int(Unknown3)
+  Unknown4 = random.randint(1,10000)
+  Unknown4 = int(Unknown4)
+  Unknown5 = random.randint(1,100000)
+  Unknown5 = int(Unknown5) 
+
+  if start == 1 :
+    clear()
+
+    printf(f"{cr.Fore.YELLOW}{cr.Style.BRIGHT}This is Easy Mode, the number I am thinking of is between" + '\n' + "1 and 10" + '\n')
+    Easy_mode = input('Type 1 to begin\n')
+    Easy_mode = int(Easy_mode)
+    while Easy_mode == 1:
+      clear()
+      x = random.randint(1,10)
+      printf("You have " + str(x) + " guesses." + "\n")
+      guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
+      guess = int(guess)
+
+      if guess == Unknown1 :
+        counter += 1
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}Correct ")
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}You took " + str(counter) + " tries to guess the number.")
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+       
+
+      else :
+        if guess < Unknown1 : 
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is higher than " + str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+          time.sleep(1)
+          clear()
+       
+        if guess > Unknown1 :
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than " + str(guess) + ".  You have \n" + str(10 - counter) + " guesses left.")
+          time.sleep(1)
+          clear()
+      if counter == x:
+        printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown1))
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n] \n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+ 
+  if start == 2 :
+    clear()
+
+    printf(f"{cr.Fore.YELLOW}{cr.Style.BRIGHT}This is Medium Mode, the number I am thinking of is between" + '\n' + "1 and 100" + '\n')
+    Medium_mode = input('Type 1 to begin\n')
+    Medium_mode = int(Medium_mode)
+    while Medium_mode == 1:
+      clear()
+      x = random.randint(1,10)
+      printf("You have " + str(x) + " guesses." + "\n")
+      guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
+      guess = int(guess)
+      if guess == Unknown2 :
+        counter += 1
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}Correct ")
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}You took " + str(counter) + " tries to guess the number.")
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+       
+
+      else :
+        if guess < Unknown2 : 
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is higher than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+          time.sleep(1)
+          clear()
+       
+        if guess > Unknown2 :
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+      if counter == x:
+        printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown2))
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+  
+  if start == 3 :
+    clear()
+
+    printf(f"{cr.Fore.YELLOW}{cr.Style.BRIGHT}This is Hard Mode, the number I am thinking of is between" + '\n' + "1 and 1000" + '\n')
+    Hard_mode = input('Type 1 to begin\n')
+    Hard_mode = int(Hard_mode)
+    while Hard_mode == 1:
+      clear()
+      x = random.randint(1,10)
+      printf("You have " + str(x) + " guesses." + "\n")
+      guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
+      guess = int(guess)
+      if guess == Unknown3 :
+        counter += 1
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}Correct ")
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}You took " + str(counter) + " tries to guess the number.")
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+       
+
+      else :
+        if guess < Unknown3 : 
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is higher than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+       
+        if guess > Unknown3 :
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+      if counter == x:
+        printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown3))
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n ")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+  
+  if start == 4 :
+    clear()
+
+    printf(f"{cr.Fore.YELLOW}{cr.Style.BRIGHT}This is Insane Mode, the number I am thinking of is between" + '\n' + "1 and 10000." + '\n')
+    Insane_mode = input('Type 1 to begin\n')
+    Insane_mode = int(Insane_mode)
+    while Insane_mode == 1:
+      clear()
+      x = random.randint(1,10)
+      printf("You have " + str(x) + " guesses." + "\n")
+      guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
+      guess = int(guess)
+      if guess == Unknown4 :
+        counter += 1
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}Correct ")
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}You took " + str(counter) + " tries to guess the number.")
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+       
+
+      else :
+        if guess < Unknown4 : 
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is higher than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+       
+        if guess > Unknown4 :
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+      if counter == x:
+        printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown4))
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+  
+  if start == 5 :
+    clear()
+
+    printf(f"{cr.Fore.YELLOW}{cr.Style.BRIGHT}This is Impossible Mode, the number I am thinking of is between" + '\n' + "1 and 100000" + '\n')
+    Impossible_mode = input('Type 1 to begin\n')
+    Impossible_mode = int(Impossible_mode)
+    while Impossible_mode == 1:
+      clear()
+      x = random.randint(1,10)
+      printf("You have " + str(x) + " guesses." + "\n")         
+      guess = input(f"{cr.Fore.CYAN}{cr.Style.BRIGHT}What is the number?" + '\n')
+      guess = int(guess)
+      if guess == Unknown5 :
+        counter += 1
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}Correct ")
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}You took " + str(counter) + " tries to guess the number.")
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+       
+
+      else :
+        if guess < Unknown5 : 
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is higher than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+       
+        if guess > Unknown5 :
+          counter += 1
+
+          printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}You are wrong! The number is lower than "+ str(guess) + ". You have \n" + str(10 - counter) + " guesses left.")
+
+          time.sleep(1)
+       
+          clear()
+      if counter == x:
+        printf(f"{cr.Fore.RED}{cr.Style.BRIGHT}Your ten guesses are gone, the number was " +str(Unknown5))
+
+        printf(f"{cr.Fore.GREEN}{cr.Style.BRIGHT}\nWould you like to go again? [y/n]\n")
+        goAgain = input().lower()
+        if goAgain == "y":
+          clear()
+          numberguessinggame()
+        else:
+          break
+  if start > 5 or start != int:
+    clear()
+    numberguessinggame()
+
+numberguessinggame ()      
